@@ -882,6 +882,9 @@ article .icon {
   margin: 1rem;
 }
 
+.update {
+  margin : 2rem;
+}
 .contact-info-container p {
   font-size: larger;
 }
