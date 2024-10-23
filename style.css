@@ -5,11 +5,137 @@
 * {
   margin: 0;
   padding: 0;
+  /* background-color: #0a001b; */
 }
 
+
+/* GENERAL */
+  /*  */
 body {
   font-family: "Poppins", sans-serif;
+  
+            
+  background-color: #000000;
+  color: #f4f4f4;
+  position: relative;
+  
+ 
+  /* background: linear-gradient(235deg, #000000, #434343); Black and dark gray gradient */
+  /* color: white; Light text color to contrast against black background */
 }
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 10px 10px; /* Adjust the size to make dots larger or smaller */
+  opacity: 0.3; /* Adjust the opacity for a subtle effect */
+  z-index: -1;
+}
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.circle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out;
+}
+
+.circle1 {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 10%;
+}
+
+.circle2 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  right: 10%;
+}
+/* Ensures proper contrast for the section text */
+.section__text {
+  color: white;
+}
+
+.section__text__p2 {
+  color: white; /* Ensure that all text in this class is white/light */
+}
+
+
+
+/* Updating link colors */
+a {
+  color: white; /* Light color for text links */
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+
+a:hover {
+  color: #cfcfcf; /* Slight hover effect */
+}
+
+/* Update buttons to contrast well with the new background */
+.btn-color-1,
+.btn-color-2 {
+  background: #ffffff;
+  color: #000000; /* Dark text on light buttons */
+  border: 1px solid #f4f4f4;
+}
+
+#desktop-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top of other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 10px 15px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+/* Update the footer and contact info for proper contrast */
+footer,
+.contact-info-upper-container {
+  background-color: #1a1a1a; /* Dark footer for contrast */
+}
+
+.contact-info-container p {
+  color: #f4f4f4; /* Light text for contrast */
+}
+
+/* Keep the icons visible */
+.icon {
+  filter: brightness(0) invert(1); /* Ensure icons stay white for visibility */
+}
+
+/* Section headings and sub-titles */
+.title,
+.section__text_work__expirence,
+.section__text_work__company {
+  color: #c770f0; /* White for headings to contrast */
+}
+
+.experience-sub-title,
+.project-title {
+  color: #c770f0;
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -31,35 +157,39 @@ a,
 nav,
 .nav-links {
   display: flex;
+  color: #c770f0;
 }
 
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 10vh;
 }
 
 .nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+  color: #c770f0;
 }
 
 a {
-  color: black;
+  color:  white ;
   text-decoration: none;
   text-decoration-color: white;
 }
 
 a:hover {
-  color: grey;
+  color: rgb(249, 247, 247);
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color:   #c770f0;
+  color: #c770f0;
 }
 
 .logo {
   font-size: 2rem;
+  color:#c770f0;
 }
 
 .logo:hover {
@@ -93,6 +223,9 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+.profile{
+  /* background-color: #0a001b; */
+}
 .menu-links {
   position: absolute;
   top: 100%;
@@ -170,6 +303,19 @@ section {
 
 .hand_wave {
   height: 3vh;
+  display: inline-block;
+  animation: rotateImage 2s ease-in-out infinite; /* Apply animation */
+}
+@keyframes rotateImage {
+  0% {
+    transform: rotate(0deg); /* Start at original position */
+  }
+  50% {
+    transform: rotate(50deg); /* Rotate to 30 degrees */
+  }
+  100% {
+    transform: rotate(0deg); /* Return to original position */
+  }
 }
 
 .section__pic-container {
@@ -221,6 +367,7 @@ section {
 .section__text__p1 {
   text-align: center;
   display: block;
+  color: white;
 }
 
 .section__text_work__expirence {
@@ -239,10 +386,107 @@ section {
 
 }
 
-.section__text__p2 {
+/* .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  transform: translateY(20px); /* Move it down slightly */
+  /* transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.6s ease-in-out; */
+
+/* }*/
+
+.section__text__p2 {
+  width: 80%; /* Responsive width */
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 1rem; /* Font size */
+  line-height: 1.5; /* Adjust line height */
+  overflow: hidden; /* Prevent overflow */
+  text-align: justify; /* Text justification */
 }
+
+.word {
+  opacity: 0; /* Initially hidden */
+  display: inline-block;
+  animation: fadeIn 3s forwards; /* Apply the fade-in animation */
+  color : #c770f0
+}
+
+.word:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.word:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.word:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.word:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.word:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.word:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.word:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.word:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+.word:nth-child(9) {
+  animation-delay: 1.8s;
+}
+
+.word:nth-child(10) {
+  animation-delay:2s;
+}
+
+.word:nth-child(11) {
+  animation-delay: 2.2s;
+}
+
+.word:nth-child(12) {
+  animation-delay: 2.4s;
+}
+
+.word:nth-child(13) {
+  animation-delay: 2.6s;
+}
+.word:nth-child(14) {
+  animation-delay: 2.8s;
+}
+.word:nth-child(15) {
+  animation-delay: 3s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1; /* Fade in and stay visible */
+  }
+}
+
+@media (max-width: 768px) {
+  .section__text__p2 {
+    width: 90%; /* Adjust width for smaller screens */
+    font-size: 0.9rem; /* Adjust font size for mobile */
+  }
+}
+
 
 .title {
   font-size: 3rem;
@@ -260,9 +504,34 @@ section {
 
 .icon {
   cursor: pointer;
-  height: 2rem;
+  height: 12rem;
 }
-
+.imagepic{
+  width: 6rem;
+  height: 6rem;
+  background-color:white  ;
+}
+.tools {
+  z-index: 4;
+  width: 12rem;
+  font-size: 1em !important;
+  margin: 15px !important;
+  padding: 10px !important;
+  opacity: 0.93 !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 5px !important;
+  display: table !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+  background-color: #000000;
+  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+}
+.tools:hover {
+  transform: scale(1.05) !important;
+  overflow: hidden !important;
+  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+}
 /* BUTTONS */
 
 .btn-container {
@@ -279,9 +548,12 @@ section {
   border-radius: 2rem;
 }
 
-.btn-color-1,
+.btn-color-1 {
+  border: white 0.1rem solid;
+}
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: white 0.1rem solid;
+  
 }
 
 .btn-color-1:hover,
@@ -289,23 +561,6 @@ section {
   cursor: pointer;
 }
 
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
-}
-
-.btn-color-1:hover {
-  background: rgb(0, 0, 0);
-}
-
-.btn-color-2 {
-  background: none;
-}
-
-.btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
-}
 
 .btn-container {
   gap: 1rem;
@@ -343,16 +598,6 @@ section {
   bottom: 2.5rem;
 }
 
-.details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
-}
-
 .section-container {
   gap: 4rem;
   height: 80%;
@@ -371,7 +616,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: rgb(255, 255, 255);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -390,6 +635,7 @@ section {
   flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
+  color: black;
 }
 
 article {
@@ -397,6 +643,7 @@ article {
   width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
+  background-color: #000000;
 }
 
 article .icon {
@@ -411,24 +658,54 @@ article .icon {
 
 .color-container {
   border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  background: rgb(0, 0, 0);
 }
 
 .project-img {
-  border-radius: 2rem;
+  border-radius: 0rem;
   width: 90%;
   height: 90%;
 }
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: rgb(253, 252, 252);
 }
 
 .project__description {
   margin-top: 1rem;
+  color: white;
 }
 
+.toggle-desc {
+  display: none;
+}
+
+.more-text {
+  display: none;
+}
+
+.toggle-desc:checked ~ p .more-text {
+  display: inline;
+}
+
+.toggle-desc:checked ~ p .dots {
+  display: none;
+}
+
+.toggle-desc:checked ~ .toggle-btn::before {
+  content: "View Less";
+}
+
+.toggle-btn::before {
+  content: "View More";
+  color: blue;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
@@ -438,7 +715,7 @@ article .icon {
   display: ruby;
   justify-content: space-around;
   margin: 1rem;
-
+  color: white;
 }
 
 /* CONTACT */
@@ -499,21 +776,6 @@ footer p {
   
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-
-}
-.loginbody {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,14,154,1) 35%, rgba(0,212,255,1) 100%);
-    
-}
-.loginForm{
-    border-radius: 20px;
-    margin-top: 150px !important;
-    width: 24% !important;
-    background-color: white !important;
-    padding: 50px;
-}
 
 .headerForm {
     width: 80px;
@@ -608,6 +870,8 @@ body{
   }
   .hand_wave {
     height: 3vh;
+    display: inline-block;
+    animation: rotateImage 2s ease-in-out infinite; /* Apply animation */
   }
 
 .card {
@@ -698,23 +962,7 @@ ul {
   cursor: pointer;
 }
 
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
-}
 
-.btn-color-1:hover {
-  background: rgb(0, 0, 0);
-}
-
-.btn-color-2 {
-  background: none;
-}
-
-.btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
-}
 
 .btn-container {
   gap: 1rem;
@@ -741,7 +989,6 @@ ul {
 .about-details-container {
   display: flex;
 }
-
 .about-pic {
   border-radius: 2rem;
 }
@@ -755,12 +1002,14 @@ ul {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
-  border-radius: 2rem;
+   background: black  ;
+  border-radius: 1rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  background-color:#ffffff
 }
+
 
 .section-container {
   gap: 4rem;
@@ -780,7 +1029,7 @@ ul {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: rgb(253, 251, 251);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -803,9 +1052,13 @@ ul {
 
 article {
   display: flex;
-  width: 10rem;
+  width: 15rem;
+  height: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-radius: 1rem;
+  border-color:#c770f0;
 }
 
 article .icon {
@@ -819,19 +1072,20 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color:#000000;
+  /* background: white; */
+  background: rgb(0, 0, 0);
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
+  border-radius: 1rem;
+  width: 100%;
   height: 90%;
 }
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color:#c770f0;
 }
 
 .project__description {
@@ -843,8 +1097,9 @@ article .icon {
 }
 
 .project-btn {
-  color: black;
+  color: white;
   border-color: rgb(163, 163, 163);
+  background-color: black;
 }
 
 .project_List_techstack {
@@ -884,6 +1139,7 @@ article .icon {
 
 .update {
   margin : 2rem;
+  color: #c770f0;
 }
 .contact-info-container p {
   font-size: larger;
@@ -906,4 +1162,20 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+.custom-svg {
+  --rem: 16;
+  font-family: 'Montserrat-Regular';
+  line-height: 1.6;
+  color: #fff;
+  text-align: center;
+  height: 1.27333in;
+  display: inline-block;
+  box-sizing: border-box;
+  max-height: calc(150px - 2rem);
+  width: 100%;
+}
+.text-container{
+  color: white;
 }

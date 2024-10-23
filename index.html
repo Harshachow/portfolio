@@ -36,13 +36,32 @@
         </div>
       </div>
     </nav>
-    <section id="profile">
+    <section id="profile" class = "profile">
    
       <div class="section__pic-container">
-        <img class = "section__pic_img"src="./assets/profile-pic.png" alt="Harsha Vardhan Amaraneni profile picture" />
+        <img class = ""src="./assets/about.png" alt="Harsha Vardhan Amaraneni profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p2"><img class ="hand_wave" src="./assets/handwave.png" alt="hand wave"/> Hello and welcome to my custom-built responsive portfolio, crafted entirely with pure vanilla JavaScript!</p>
+        <!-- <img class="custom-svg" src="./assets/welcome.svg" alt="Custom SVG icon" /> -->
+        <p class="section__text__p2">
+          <img class="hand_wave" src="./assets/handwave.png" alt="hand wave" />
+          <span class="word">Hello</span>
+          <span class="word">and</span>
+          <span class="word">welcome</span>
+          <span class="word">to</span>
+          <span class="word">my</span>
+          <span class="word">custom-built</span>
+          <span class="word">responsive</span>
+          <span class="word">portfolio</span>
+          <span class="word">crafted</span>
+          <span class="word">entirely</span>
+          <span class="word">with</span>
+          <span class="word">pure</span>
+          <span class="word">vanilla</span>
+          <span class="word">JavaScript!</span>
+        </p>
+        
+
         <!-- <h1 class="title">Harsha Vardhan Amaraneni</h1> -->
          
       
@@ -74,12 +93,12 @@
           />
         </div>
         <div class = "update">
-          Last updated: 26/08/2024
+          Last updated: 23/10/2024
         </div>
       </div>
       
     </section>
-
+   
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -109,12 +128,19 @@
               </button>
             </div>
             <div class = "project__description">
+              <input type="checkbox" class="toggle-desc" id="toggle-desc-1">
+              <p  class = "project__description">
               Experience a professionally crafted eCommerce ReactJS web application, meticulously developed from scratch,
-               and seamlessly hosted on the web using Netlify. Harnessing the power of Firebase for robust data management and 
+               and seamlessly hosted on the web using Netlify.
+               <span class="dots">...</span><span class="more-text">
+                   Harnessing the power of Firebase for robust data management and 
                incorporating Google authentication ensures secure user access. Integrate Stripe for seamless payment processing,
                 providing customers with a convenient and trusted transaction experience. Elevate the user interface with SCSS styling, 
                 enhancing visual appeal and usability. This comprehensive project offers hands-on practice in modern web development 
                 techniques, delivering a dynamic and responsive platform tailored for optimal eCommerce performance.
+               </span>
+              </p>
+              <label for="toggle-desc-1" class="toggle-btn"></label>
             </div>
             <div class = project_List_techstack>
               <h5>• React</h5>
@@ -135,7 +161,7 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="experience-sub-title project-title">Tasty tracker</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -151,13 +177,17 @@
               </button>
             </div>
             <div class = "project__description">
-              Experience an innovative online food ordering platform built using Angular, 
-              featuring multi-routing and CSS styling for a visually appealing interface. 
-              This dynamic application boasts a global search bar, enabling users to effortlessly discover their desired items.
-               Additionally, a global filter functionality enhances user experience by allowing them to 
-               filter specific types of food according to their preferences. 
-               This project showcases practical hands-on experience with Angular 16 and Angular CLI, 
-               demonstrating proficiency in developing scalable and efficient web applications.
+            <input type="checkbox" class="toggle-desc" id="toggle-desc-2">
+              <p  class = "project__description">
+                An online food ordering platform built using Angular, 
+                featuring multi-routing and CSS styling for a visually appealing interface. 
+                <span class="dots">...</span><span class="more-text">
+                This dynamic application boasts a global search bar, enabling users to effortlessly discover their desired items.
+                Additionally, a global filter functionality enhances user experience by allowing them to filter specific types of food according to their preferences.
+                This project showcases practical hands-on experience with Angular 16 and Angular CLI, demonstrating proficiency in developing scalable and efficient web applications.
+                </span>
+              </p>
+              <label for="toggle-desc-2" class="toggle-btn"></label>
             </div>
             <div class = project_List_techstack>
               <h5>• Angular</h5>
@@ -195,10 +225,14 @@
               </button>
             </div>
             <div class = "project__description">
+              <div>
               An Invoice Generator project built with React and TailwindCSS. Add items, quantity, prices, tax rates and discounts.
                Download Generated Invoices as PDFs to your device and print out.
                 Used html-to-image to capture the data from modal and convert it from canvas to pdf with jsPDF.
-               <div class = project_List_techstack>
+              </div>
+
+                <div class = project_List_techstack>
+             
                 <h5>• React</h5>
                 <h5>Tailwind CSS</h5>
                 <h5>• Html-to-image</h5>
@@ -227,14 +261,14 @@
           />
         </div>
         <div class="about-details-container">
-          <div class="about-containers">
+          <!-- <div class="about-containers">
             <div class="details-container">
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
                 class="icon"
               />
-              <h3>Experience</h3>
+              <h3 style ="color : black">Experience</h3>
               <p>3+ years <br />Frontend Development</p>
             </div>
             <div class="details-container">
@@ -243,16 +277,21 @@
                 alt="Education icon"
                 class="icon"
               />
-              <h3>Education</h3>
+              <h3 style ="color : black">Education</h3>
               <p>Masters<br />Wilmington University</p>
               <p>Btech<br />IIITB</p>
             </div>
-          </div>
+          </div> -->
           <div class="text-container">
-            <p>
-              Front-End Developer with 3+ years of hands-on experience on Reactjs, Angular 8, JavaScript, TypeScript, CSS, SCSS, Styled
-              Components, Tailwind CSS, HTML, HTML5, Material UI, Bootstrap 5, Apollo client, GraphQL, RestAPI.
-            </p>
+            <h3> Hi, I am Harsha Vardhan Amaraneni</h3>
+            <h3 style="color: #c770f0">
+              Software Developer with 3+ years of work expirence.
+            </h3>
+            <h3>I specialize in building scalable, user-friendly applications with a strong emphasis on clean, reusable code and accessibility. </h3>
+              <h3>My expertise lies in working with modern technologies like React, JavaScript & AWS, and I enjoy the challenge of turning complex problems into efficient, responsive solutions.</h3>
+            <div></div>
+            <h3><span style="color: #c770f0">Front-end Stack:</span> JavaScript, TypeScript, ReactJs, Angular, HTML, HTML5, CSS, SCSS, Material UI, Bootstrap 5, Tailwind CSS.</h3>
+            <h3> <span style="color: #c770f0">Back-end Stack:</span> Java, JDBC, springboot, Mysql, Apollo client.</h3>
           </div>
         </div>
       </div>
@@ -265,311 +304,144 @@
       />
      
     </section>
+   
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Angular</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tailwind CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>GraphQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Apollo client</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React-Redux</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Firebase</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Web-pack</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Babel</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Frontend Testing</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
+      <p class="section__text__p1">Proffesional</p>
+      <h1 class="title">Skillset</h1>
+      <div>
+        <div class="article-container">
+          <div class = "tools">
+            <img
+            src="./assets/js.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+            
+              <h3 style="color: #c770f0">JavaScript</h3>
+     
           </div>
-         
-          <!-- <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div> -->
-        </div>
-      
-        <div>
-          <h3 class="section__text_work__expirence">Work Experience</h3>
-          <p class="section__text_work__company">Bizom (Mobisy PVT)  07/2022 – 07/2023 | Bangalore, India</p>
-          <p class = "section__text__role"> Software Engineer - Frontend</p>
-         
-
-
-
-
-
-
-          <div> • Enhanced mobile user experience by optimizing screen utilization, leading to a 25% reduction in user drop-off
-            rates on mobile devices.</div>
-          <div>• Assumed responsibility for production releases, delivering 30+ successful releases within strict deadlines.</div>
-          <div> • Implemented global filters that empowered users to customize data according to their needs, leading to a 25%
-            improvement in user satisfaction .</div>
-          <div> • Enhanced performance and responsiveness by applying React Memo, useCallback, and efficient data fetching
-            techniques, resulting in a 11% faster page load time.</div>
-          <div>• Conducted thorough code reviews and provided mentorship to team members on best practices in React.js, JavaScript,
-            and front-end development to best of my knowledge .</div>
-          <div> • Utilized lazy loading and code splitting to optimize application performance and reduce loading time.</div>
-          <div> • Applied React Memo, useCallback and efficient data fetching techniques to further enhance performance and responsiveness.</div>
-          <div> • Implemented user authentication and authorization flows using JWT tokens.</div>
-          <div> • Served as senior developer of the team for six months, successfully overseeing team activities and ensuring project continuity.</div>
-          
-          <p class = "section__text__role">Assosiate Softeware Engineer - Frontend</p>
-          
-          <div> • Implemented automation to the UI, reducing the number of clicks needed to generate a simple report from 32 to 12,
-            improving workflow efficiency by over 60%.</div>
-          <div>  •Delivered 50+ features on UI.</div>
-          <div>  •Added mixpanel and Google Analytics to track events and advance product analysis.</div>
-          <div>  •Developed Automated Replenishment System for FMCG companies in UI.</div>
-          <div> • Utilized Apollo Client’s cache and optimistic UI updates, enhancing the user experience with instantaneous feedback
-            and reducing perceived latency by 35%</div>
-          <div>  • Integrated GraphQL with React applications, ensuring efficient data fetching and real-time updates.</div>
-            <div>  • Developed custom error boundaries in React to handle component errors gracefully and improve application stability.</div>
-            <div>  • Integrated internal users page with in Oneview Analytics Platform.</div>
-            <div>  • Leveraged modern CSS techniques, including Flexbox and Grid, to create responsive and adaptive layouts.</div>
-            <div>  • Utilized advanced JavaScript features, such as ES6+ syntax, to write clean, efficient, and maintainable code.</div>
-            <div>  • Ensured high code quality and maintainability through comprehensive unit and integration testing with Jest.</div>
-
-          
-           <p class = "section__text__role"> R&D Intern</p>
-           <div>  • Acquired proficiency in frontend technologies including ReactJs, HTML, CSS, GraphQl, Apollo Client, and material UI.</div>
-            <div> • Contributed significantly to various product developments within the company, resolving multiple issues and gaining in-depth knowledge of the products.</div>
-            <div> • Actively participated in the development of user interfaces using ReactJS, showcasing expertise in JavaScript to create interactive and dynamic web applications.</div>
-        
-            <!-- <p class="section__text_work__company">Sri VenkataRamana Agencies  01/2020 – 12/2020 | Remote, India</p>
-          <p class = "section__text__role"> Software Engineer - Frontend</p>
-          
-          <div>  • Designed and implemented UI components using Angular 8.</div>
-          <div>  • Integrated REST APIs for data fetching and synchronization, ensuring seamless communication between the front-end and back-end services.</div>
-          <div>  • Implemented Angular routing to enable navigation and manage application state.</div>
-          <div>  • Used Jasmine and Karma to do extensive unit and integration testing to guarantee dependable and high-quality code.</div>
-          <div>  • Styled the application with SCSS.</div>
-          <div>  • Employed Angular's state management libraries such as NgRx to manage complex application state and improve maintainability.</div>
-          <div>  • Utilized Angular's HttpClient module to handle asynchronous HTTP requests and manage API interactions efficiently.</div>
-          </div> -->
-      </div>    
-      <img
-      src="./assets/arrow.png"
-      alt="Arrow icon"
-      class="icon arrow"
-      onclick="location.href='./#contact'"
-    />
-    </section>
+          <div class = "tools">
+            <img
+            src="./assets/ts.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+            
+              <h3 style="color: #c770f0">TypeScript</h3>
     
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/java.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+            
+              <h3 style="color: #c770f0">Java</h3>
+      
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/react.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+            
+              <h3 style="color: #c770f0">React</h3>
+   
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/angular.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+            
+            <h3 style="color: #c770f0">Angular</h3>
+     
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/graphql.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+            
+              <h3 style="color: #c770f0">GraphQL</h3>
+         
+          </div>
+          
+          <div class = "tools">
+            <img
+            src="./assets/git.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+            
+              <h3 style="color: #c770f0">Git</h3>
+       
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/visual-studio.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+          <h3 style="color: #c770f0">Visual Studio</h3>
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/spring-boot.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+          <h3 style="color: #c770f0">Springboot</h3>
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/tailwind-css.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+          <h3 style="color: #c770f0">Tailwind CSS</h3>
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/c-plus-plus.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+          <h3 style="color: #c770f0">C++</h3>
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/css.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+          <h3 style="color: #c770f0">CSS</h3>
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/html5.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+          <h3 style="color: #c770f0">HTML</h3>
+          </div>
+          <div class = "tools">
+            <img
+            src="./assets/python.png"
+            alt="Arrow icon"
+            class="imagepic"
+          />
+          <h3 style="color: #c770f0">Python</h3>
+          </div>
+      </div>
+      <div>
+        
+      </div>
+    </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -605,5 +477,7 @@
       </nav>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+   
   </body>
 </html>
