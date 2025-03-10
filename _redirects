@@ -1,3 +1,1 @@
-# Redirect all old URLs to the new domain
-https://harshaamaraneniportfolio.netlify.app/* https://hamaraneni.netlify.app/:splat 301!
-https://harshaamaraneniportfolio.netlify.app/* https://hamaraneni.netlify.app/:splat 301!
+
