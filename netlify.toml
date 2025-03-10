@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "https://hamaraneni.netlify.app/:splat"
-  to = "https://harshaamaraneniportfolio.netlify.app/*"
+  from = "https://hamaraneni.netlify.app/*"
+  to = "https://harshaamaraneniportfolio.netlify.app/:splat"
   status = 301
   force = true
